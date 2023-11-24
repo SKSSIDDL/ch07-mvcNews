@@ -27,7 +27,7 @@
 <body>
 	<div class="page-main">
 		<h2>뉴스 수정</h2>
-		<form id="modify_form" action="modify.do" method="post">
+		<form id="modify_form" action="modify.do" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="num" value="${vo.num}">
 			<ul>
 				<li>
@@ -51,9 +51,11 @@
 					<textarea rows="5" cols="40" name="article" id="article" class="input-check">${vo.article}</textarea>
 				</li>
 				<li>
-					<label for="filename">이미지</label>
-					<input type="file" name="filename" id="filename" value="${vo.filename}" accept="image/gif,image/png,image/jpeg" class="input-check">				
-				</li>
+    				<label for="filename">이미지</label>
+    				<input type="file" name="filename" id="filename" accept="image/gif,image/png,image/jpeg">
+    				<br>
+    				<img src="${pageContext.request.contextPath}/upload/${vo.filename}" width="100" style="margin-left:100px;"> 
+    			</li>
 			</ul>
 			<div class="align-center">
 				<input type="submit" value="글수정" >

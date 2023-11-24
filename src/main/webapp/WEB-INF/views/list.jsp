@@ -32,7 +32,7 @@
 					<td>${news.num}</td>
 					<td><a href="detail.do?num=${news.num}">${news.title}</a></td>
 					<td>${news.writer}</td>
-					<td>${news.reg_date}</td>
+					<td class="align-center">${news.reg_date}</td>
 				</tr>	
 				</c:forEach>
 			</table>

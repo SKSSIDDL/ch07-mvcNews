@@ -24,7 +24,7 @@ public class FileUtil {
 	}
 	
 	//파일 삭제
-	public void removeFile(HttpServletRequest request,String filename) {
+	public static void removeFile(HttpServletRequest request,String filename) {
 		if(filename!=null) {
 			//업로드 절대 경로
 			String upload = request.getServletContext().getRealPath(UPLOAD_PATH);

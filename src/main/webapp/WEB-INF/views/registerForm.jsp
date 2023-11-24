@@ -27,7 +27,7 @@
 <body>
 	<div class="page-main">
 		<h2>뉴스 등록</h2>
-		<form id="register_form" action="register.do" method="post" enctype="multipart/form-data">
+		<form id="register_form" action="register.do" method="post" enctype="multipart/form-data"> <%-- 파일 업로드를 위해 enctype 필수 --%>
 			<ul>
 				<li>
 					<label for="title">제목</label>
